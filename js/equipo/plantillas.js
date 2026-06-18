@@ -249,11 +249,11 @@ const plantillasJugadores = {
   { nombre: "Y.Gonzalez", edad: 31, media: 68, posicion: "ED", foto: "img/jugadores/Y/yony.png" },
   { nombre: "F.Fydrizewski", edad: 33, media: 72, posicion: "DC", foto: "img/jugadores/P/polaco.png", nacionalidad: "argentina" },
   { nombre: "F.Chaverra", edad: 26, media: 67, posicion: "EI", foto: "img/jugadores/F/fchaverra.png" },
-    
+   
   //Leyendas
-  { nombre: "M.Calero", edad: 18, media: 82, posicion: "PO", foto: "img/jugadores/LY/calerod.png", leyenda: true, premium: true},
-  { nombre: "M.Yepes", edad: 18, media: 82, posicion: "DFC", foto: "img/jugadores/LY/yepeds.png", leyenda: true,  premium: true},
-  { nombre: "A.Perez", edad: 18, media: 82, posicion: "MD", foto: "img/jugadores/LY/perdez.png", leyenda: true, premium: false}
+  { nombre: "J.M. Moreno", edad: 18, media: 82, posicion: "MO", foto: "img/jugadores/LY/charro.png", leyenda: true, premium: true, nacionalidad: "argentina"},
+  { nombre: "Mao Molina", edad: 18, media: 82, posicion: "EI", foto: "img/jugadores/LY/mao.png", leyenda: true,  premium: true},
+  { nombre: "J.Restrepo", edad: 18, media: 82, posicion: "MD", foto: "img/jugadores/LY/choronta.png", leyenda: true, premium: false}
   
   ],
 
