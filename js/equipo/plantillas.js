@@ -848,7 +848,7 @@ const plantillasJugadores = {
   { nombre: "R.Urruti", edad: 18, media: 76, posicion: "DC", foto: "img/jugadores/LY/urruti.png", leyenda: true, premium: false , nacionalidad: "argentina"}
 ],
 
-"Ind.Yumbo": [
+"IVC": [
   { nombre: "J.Mendez", edad: 25, media: 62, posicion: "PO", foto: "img/jugadores/M/mendez.png" },
   { nombre: "L.Mena", edad: 21, media: 62, posicion: "PO" , foto: "img/jugadores/L/lmena.png"},
 
