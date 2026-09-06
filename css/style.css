@@ -1,0 +1,221 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh; /* ocupa toda la pantalla como mínimo */
+}
+
+
+.card {
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  border: 2px solid #3b82f6;
+  border-radius: 16px;
+  padding: 5px;
+  width: 360px;
+  box-shadow: 0 0 20px rgba(59,130,246,0.6);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 18px;
+  }
+
+
+
+/* ===============================
+   MEDIA QUERIES PERSONALIZADAS
+=================================*/
+@media (max-width: 380px) {
+  #selectorContenedor {
+    flex-direction: column;
+    height: auto;
+  }
+  #selectorContenedor select {
+    width: 80%;
+  }
+
+  .card {
+    width: 95%;
+    padding: 12px;
+  }
+   
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+
+  .card {
+    width: 90%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .card {
+    width: 400px;
+  }
+}
+
+.text-h3{
+  color: white;
+  background: none;
+  text-align: center;
+}
+
+h1{
+  color: white;
+}
+
+
+.presupuesto-verde {
+  color: green;
+}
+.presupuesto-naranja {
+  color: orange;
+}
+.presupuesto-rojo {
+  color: red;
+}
+
+/*botones extras*/
+.btn_ext{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+.btn_ext button{
+  background: linear-gradient(145deg, #3b82f6, #1d4ed8);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  color: #ccc;
+
+}
+
+
+.btn_ext button:hover{
+ background: #1d315e;
+}
+
+
+.btn_exts {
+  background:  #08219f;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Vistas */
+.vista { 
+  display: none; 
+  padding-top: 70px;
+  padding-bottom: 90px;
+
+}
+.vista.activa { display: block; }
+
+/*===btn tablas===*/
+.btn-tablas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-tablas button{
+  background: linear-gradient(145deg, #3b82f6, #1d4ed8);
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+}
+
+
+/*================ Barra inferior ================*/
+.barraInferior{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:50px;
+ background: rgba(8, 39, 92, .90);
+
+backdrop-filter: blur(8px);
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    border-top:1px solid #ccc;
+    z-index:9999;
+}
+
+.barraInferior button{
+    border:none;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.barraInferior button:hover{
+    color: #FFD700;
+}
+
+/*================ Menú lateral ================*/
+
+#menuLateral{
+    position:fixed;
+    top: 325px;
+    right:-260px;
+    width:260px;
+    height:45%;
+    background:white;
+    box-shadow:-3px 0 10px rgba(0,0,0,.25);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    padding:20px;
+    transition:.3s;
+    z-index:10000;
+    box-sizing:border-box;
+    border-radius: 30px;
+}
+
+#menuLateral.abierto{
+    right:0;
+}
+
+#menuLateral button{
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:#f3f3f3;
+    text-align:left;
+    cursor:pointer;
+}
+
+
+#menuLateral i{
+    margin: 5px;
+}
