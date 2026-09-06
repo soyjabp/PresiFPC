@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayuda – Simulador</title>
+<link rel="stylesheet" href="ayuda.css">
+ <style> 
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #f2f6fc;
+  color: #0f172a;
+}
+
+.header {
+  background: linear-gradient(135deg, #0a3cff, #1e90ff);
+  color: white;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+}
+
+.header p {
+  opacity: 0.9;
+  margin-top: 6px;
+}
+
+.contenedor {
+  max-width: 900px;
+  margin: auto;
+  padding: 16px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  color: #0a3cff;
+  margin-bottom: 8px;
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: #1e40af;
+  font-size: 1rem;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+.btn-volver {
+  display: block;
+  text-align: center;
+  background: #0a3cff;
+  color: white;
+  padding: 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.btn-volver:hover {
+  background: #1e40af;
+}
+
+details {
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: #f8fbff;
+  border: 1px solid #dbeafe;
+  padding: 10px 14px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #1e40af;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] {
+  background: #eef4ff;
+}
+
+details p {
+  margin: 8px 0;
+}
+
+.alerta {
+  background: #e0ecff;
+  border-left: 4px solid #2563eb;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.ayuda{
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+}
+
+.ayuda a{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 15px;
+  text-decoration:none;
+  border-radius:8px;
+}
+
+ </style>
+</head>
+<body>
+
+<header class="header">
+  <h1>Centro de Ayuda</h1>
+  <p>Guía rápida para entender el simulador</p>
+</header>
+
+<main class="contenedor">
+
+  <!-- GESTION DEL CLUB -->
+  <section class="card">
+    <h2>🏢 Gestión del Club</h2>
+    <p class="descripcion">
+      Aquí tomas las decisiones más importantes como presidente del club.
+    </p>
+
+    <h3>⚽ Elección del equipo</h3>
+    <ul>
+      <li>Elige tu equipo favorito o el que prefieras.</li>
+      <li>Se asigna automáticamente un Director Técnico.</li>
+      <li>El estadio oficial se asigna según el club.</li>
+      <li>Puedes ver tu plantilla y la de otros equipos.</li>
+    </ul>
+
+    <h3>🧠 Gestión deportiva</h3>
+    <ul>
+      <li>Hablar con el DT para cambiar el estilo de juego.</li>
+      <li>Despedir y Contratar Dt.</li>
+      <li>Director deportivo con recomendaciones de fichajes.</li>
+      <li>Búsqueda libre de jugadores y fichajes como presidente.</li>
+      <li>Vista de fichajes de otros equipos.</li>
+      <li>Pretemporada y mejora de cantera.</li>
+    </ul>
+
+    <h3>💰 Gestión económica</h3>
+    <ul>
+      <li>Venta de camisetas.</li>
+      <li>Ingresos por sponsors y derechos de TV.</li>
+      <li>Balance económico con todos los movimientos del club.</li>
+    </ul>
+
+    <h3>📊 Información y estadísticas</h3>
+    <ul>
+      <li>Comparativa de fuerza y promedio de plantilla.</li>
+      <li>Palmarés de todos los equipos.</li>
+      <li>Noticias de fichajes importantes.</li>
+    </ul>
+
+    <h3>🔄 Decisiones institucionales</h3>
+    <ul>
+      <li>Renunciar como presidente.</li>
+      <li>Refundar o comprar la ficha de otro equipo.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+  <h2>🎮 Cómo jugar / Simulación</h2>
+  <p class="descripcion">
+    Sigue este orden para que el simulador funcione correctamente. El proceso se repite cada temporada.
+  </p>
+
+  <details>
+    <summary>1️⃣ Simular</summary>
+    <p>
+      El primer paso obligatorio simular.
+    </p>
+    <ul>
+      <li>Presiona el botón <strong>Simular</strong>.</li>
+      <li>Se simulara la Segunda División , esperas 3 seg y arranca la simulacion de Primera División.</li>
+      <li>Los resultados se pueden ver en posiciones <strong>Liga y Torneo</strong>.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Primera División (Primera A)</summary>
+    <p>
+      Esto saldra en la simulacion de <strong>Primera División</strong>.
+    </p>
+    <ul>
+      <li>Se abrirá un modal con:
+        <ul>
+          <li>Calendario de tu equipo</li>
+          <li>Resultados fecha por fecha</li>
+          <li>Tabla parcial</li>
+          <li>Goleadores al finalizar</li>
+          <li>se juega la fase final</li>
+        </ul>
+      </li>
+      <li>Los resultados quedan guardados en posiciones.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>2️⃣ Procesar</summary>
+    <p>
+      Presiona el botón <strong>Procesar</strong>.
+    </p>
+    <ul>
+      <li>Se mostrará el mensaje: <em>Semestre finalizado</em>.</li>
+      <li>Queda habilitado el segundo semestre.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Copa Colombia y Economia</summary>
+    <ul>
+      <li>Se abrirá la parte <strong>Económica</strong>:</li>
+      <ul>
+        <li>Debes Cobrar: derechos de Tv , decidir si pagas sueldos o no y pagar el alquiler del estadio.</li>
+      </ul>
+      <li>Despues te saldra para jugar la <strong>Copa Colombia</strong>.</li>
+      <li>Juega todas sus fases hasta definir el campeón.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Notificaciones (Hinchada y eventos)</summary>
+    <ul>
+      <li>La hinchada evalúa el rendimiento del equipo.</li>
+      <li>Un mal rendimiento puede costarte el cargo.</li>
+      <li>Un mal manejo economico puede costarte el cargo.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>3️⃣ Segundo semestre (mismo proceso)</summary>
+    <ul>
+      <li>Presionas <strong>Simular</strong>.</li>
+      <li>Se simula segunda , esperas 3 seg y se juega primera.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>4️⃣ Cierre de temporada</summary>
+    <ul>
+      <li>Presiona <strong>Procesar</strong>.</li>
+      
+    </ul>
+
+    <p>Luego se mostrarán:</p>
+    <ul>
+      <li>Ascensos, descensos y repechaje.</li>
+      <li>Copa Libertadores (octavos a final).</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Retiros, cantera y SuperLiga</summary>
+    <ul>
+      <li>Aparecerá la Bandeja de notificaciones con:
+        <ul>
+          <li>Jugadores retirados</li>
+          <li>Canteranos ascendidos</li>
+        </ul>
+      </li>
+      <li>Se juega <strong>SuperLiga</strong>.</li>
+      <li>Puedes consultar en <strong>posiciones</strong>.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>📌 Dato extra: Fichajes y Titulos</summary>
+    <ul>
+      <li>Los fichajes se realizan al finalizar cada semestre.</li>
+      <li>Puedes fichar también desde el <strong>Director Deportivo</strong>.</li>
+      <li>Los titulos se suman automaticamente al ganarlos.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>📌 ¿Cómo se calcula la fuerza del equipo?</summary>
+    <ul>
+      <strong>Fuerza:</strong><br>
+      <li>Representa el nivel competitivo del equipo para el partido. Tiene en cuenta el nivel de los 11 jugadores que salen al campo y el nivel base del club.</li><br>
+      <strong>Base:</strong><br>
+      <li>Representa el nivel propio del club, independientemente de los jugadores que formen la alineación.</li><br>
+      <strong>Titulares:</strong><br>
+      <li>Representa la calidad de los 11 jugadores que salen al campo, teniendo en cuenta su media y su forma actual.</li><br>
+      <strong>Plantilla:</strong><br>
+      <li>Representa la calidad general de toda la plantilla, incluyendo titulares y suplentes. Es un indicador de la profundidad del equipo.</li><br>
+      <strong>En resumen:</strong><br>
+      <li>La Fuerza indica qué tan competitivo es el equipo en el partido, la Base representa el nivel propio del club, los Titulares muestran la calidad del once que juega y la Plantilla refleja la profundidad del equipo.</li>
+    </ul>
+  </details>
+
+</section>
+
+ <section class="card">
+  <h2>⚽ Formatos</h2>
+  <p class="descripcion">
+    Aquí defines el formato de competencia. 
+    Estas opciones deben usarse en momentos específicos para evitar errores.
+  </p>
+
+  <details>
+    <summary>⚽ Formatos de competencia</summary>
+    <p>
+      Puedes modificar el formato del torneo.
+    </p>
+
+    <h4>🔵 Playoffs</h4>
+    <ul>
+      <li>Debes activarlo <strong>antes de empezar la simulacion, para activarlo te diriges a configuracion.</strong>.</li>
+    </ul>
+
+  </details>
+
+  <details>
+    <summary>⚠️ Reglas importantes de formatos</summary>
+    <ul>
+      <li>Después de usar el formato playoffs debes <strong>quitar la selección</strong>.</li>
+      <li>Si no hay ningún formato seleccionado, el torneo se juega con
+        <strong>cuadrangulares normales</strong>.</li>
+    </ul>
+
+    <p class="alerta">
+      ⚠️ Recuerda siempre desactivar el formato una vez simulado
+    </p>
+  </details>
+
+</section>
+
+<section class="card ayuda">
+    <summary>¿No entendiste?</summary>
+    
+    <p>
+        Si tienes dudas sobre cómo funciona el simulador o alguna parte no quedó clara,
+        puedes ver los tutoriales en YouTube donde se explica paso a paso su uso.
+    </p>
+
+    <a href="https://youtube.com/@presifpc1?si=HZUFzgZ_SitQIK7S" target="_blank">
+        Ver tutoriales en YouTube
+    </a>
+</section>
+
+  <a href="simulador.html" class="btn-volver">⬅ Volver al simulador</a>
+
+</main>
+
+</body>
+</html>
