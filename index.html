@@ -39,7 +39,7 @@
       </div>
 
       <div class="card">
-        <img id="escudoCarrusel" src="escudos/nacional.png"
+        <img id="escudoCarrusel" src="img/escudos/nacional.png"
                                  alt="Escudo">
         <h3>Equipos</h3>
         <p>Explora los clubes del fútbol colombiano</p>
@@ -152,7 +152,7 @@ const escudos = [
 
 let e=0;
 setInterval(()=>{e=(e+1)%escudos.length;
-  document.getElementById("escudoCarrusel").src=`escudos/${escudos[e]}.png`;
+  document.getElementById("escudoCarrusel").src=`img/escudos/${escudos[e]}.png`;
 },1500);
 
 /* MODAL */
