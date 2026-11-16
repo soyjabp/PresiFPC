@@ -178,7 +178,7 @@
     display.innerHTML = "";
     if (nombre) {
       const img = document.createElement("img");
-      img.src = `img/escudos/${normalizarNombre(nombre)}.png`;
+      img.src = `../img/escudos/${normalizarNombre(nombre)}.png`;
       img.alt = nombre;
       const span = document.createElement("span");
       span.textContent = nombre;
@@ -191,7 +191,7 @@
     const div = document.createElement("div");
     div.className = "resultado-equipo";
     const img = document.createElement("img");
-    img.src = `img/escudos/${normalizarNombre(nombre)}.png`;
+    img.src = `../img/escudos/${normalizarNombre(nombre)}.png`;
     img.alt = nombre;
     const span = document.createElement("span");
     span.textContent = nombre;
