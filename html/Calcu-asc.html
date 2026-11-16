@@ -144,7 +144,11 @@
     "real santander",
     "quindio",
     "boca jrs. cali",
-    "patriotas"
+    "patriotas",
+    "envigado",
+    "ivc",
+    "b.chico",
+    "union m."
   ];
 
   window.onload = function() {
@@ -174,7 +178,7 @@
     display.innerHTML = "";
     if (nombre) {
       const img = document.createElement("img");
-      img.src = `escudos/${normalizarNombre(nombre)}.png`;
+      img.src = `img/escudos/${normalizarNombre(nombre)}.png`;
       img.alt = nombre;
       const span = document.createElement("span");
       span.textContent = nombre;
@@ -187,7 +191,7 @@
     const div = document.createElement("div");
     div.className = "resultado-equipo";
     const img = document.createElement("img");
-    img.src = `escudos/${normalizarNombre(nombre)}.png`;
+    img.src = `img/escudos/${normalizarNombre(nombre)}.png`;
     img.alt = nombre;
     const span = document.createElement("span");
     span.textContent = nombre;
