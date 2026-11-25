@@ -6,7 +6,7 @@ box-sizing:border-box;
 
 body{
 font-family:'Montserrat',sans-serif;
-height: 100vh;
+height: 120vh;
 }
 
 
@@ -80,11 +80,10 @@ height: 100px;
 }
 
 .logoCircle{
-width:165px;
+width:164px;
 height:100px;
 margin:auto;
 border-radius:50%;
-/*background:rgba(255,255,255,.15);*/
 background: black;
 border:4px solid rgba(255,255,255,.75);
 display:flex;
@@ -171,8 +170,8 @@ font-size:46px;
 }
 
 .logoCircle{
-width:95px;
-height:95px;
+width: 165px;
+height:100px;
 }
 
 .logoCircle i{
