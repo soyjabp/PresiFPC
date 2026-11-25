@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<title>PresiFPC</title>
+  
+<link rel="stylesheet" href="css/inicio.css">
+
+</head>
+<body>
+
+<div class="fondo fondo-1"></div>
+<div class="fondo fondo-2"></div>
+
+<div class="overlay"></div>
+
+<header>
+<div class="status"></div>
+</header>
+
+<main>
+
+<div class="logo">
+
+<div class="logoCircle">
+<img class="logos" src="img/logo.png" alt="">
+</div>
+
+</div>
+
+<div class="menu">
+<button onclick="window.location.href='simulador.html'">Jugar</button>
+<button onclick="window.location.href='html/minijuegos.html'">Mini Juegos</button>
+<button onclick="window.location.href='html/comunidad.html'">Comunidad</button>
+<button onclick="window.location.href='html/packs.html'">Packs</button>
+</div>
+
+<div class="card-equipos">
+  <img id="escudoCarrusel" src="img/escudos/nacional.png" alt="Escudo">
+  <h3>Equipos</h3>
+  <p>Explora los clubes del fútbol colombiano</p>
+</div>
+
+</main>
+
+<script>
+
+  
+/* CARRUSEL */
+const escudos = [
+      "nacional", "millonarios", "america", "cali", "junior",
+      "santa_fe", "tolima","medellin", "once_caldas", "pereira", 
+      "alianza", "bucaramanga", "inter_bogota","envigado",
+      "pasto", "aguilas", "b.chico", "fortaleza", "llaneros",  
+      "u.magdalena","atletico_fc","barranquilla",
+      "boca_jrs._cali","bogota","cucuta",
+      "ivc","inter_palmira","jaguares",
+      "leones","orsomarso","patriotas","quindio",
+      "real_cartagena","r.cundinamarca","r.santander",
+      "tigres"
+       ];
+
+let e=0;
+setInterval(()=>{e=(e+1)%escudos.length;
+  document.getElementById("escudoCarrusel").src=`img/escudos/${escudos[e]}.png`;
+},1500);
+
+
+  const fondos = [
+  "img/fondos/fondo1.jpg",
+  "img/fondos/fondo2.jpg",
+  "img/fondos/fondo3.jpg",
+  "img/fondos/fondo4.jpg",
+  "img/fondos/fondo5.jpg",
+  "img/fondos/fondo6.jpg",
+  "img/fondos/fondo7.jpg",
+  "img/fondos/fondo8.jpg",
+  "img/fondos/fondo9.jpg",
+];
+
+let fondoActual = 0;
+const fondo1 = document.querySelector(".fondo-1");
+const fondo2 = document.querySelector(".fondo-2");
+
+fondo1.style.backgroundImage = `url(${fondos[0]})`;
+
+setInterval(() => {
+  fondoActual = (fondoActual + 1) % fondos.length;
+  fondo2.style.backgroundImage = `url(${fondos[fondoActual]})`;
+
+  fondo2.style.opacity = 1;
+  fondo1.style.opacity = 0;
+
+  setTimeout(() => {
+    fondo1.style.backgroundImage = fondo2.style.backgroundImage;
+    fondo1.style.opacity = 1;
+    fondo2.style.opacity = 0;
+  }, 1200);
+}, 30000); // cambia cada 30 segundos
+
+</script>
+
+</body>
+</html>
