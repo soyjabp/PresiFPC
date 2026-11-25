@@ -54,6 +54,11 @@
       "src": "screenshots/cap3.png",
       "sizes": "1080x1920",
       "type": "image/png"
+    },
+    {
+      "src": "screenshots/cap4.png",
+      "sizes": "1080x1920",
+      "type": "image/png"
     }
   ]
 }
